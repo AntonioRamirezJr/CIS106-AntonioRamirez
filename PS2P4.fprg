@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 04:25:37 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTY2SzVLTjU7MjAyMy0xMC0wMTswNDowNzoxMiBQTTszMjg0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTY2SzVLTjU7MjAyMy0xMC0wMTswNDoyNTozNyBQTTsxOzMzOTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Calculate your total cost of tuition for the semester!&quot;" newline="True"/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="creditstaken" type="Real" array="False" size=""/>
+            <declare name="labfee" type="Real" array="False" size=""/>
+            <declare name="totaltuition" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="creditstaken"/>
+            <assign variable="labfee" expression="100"/>
+            <assign variable="totaltuition" expression="creditstaken * 250 + labfee"/>
+            <output expression="&quot;Including the $100 lab fee, the total cost of tuition for &quot; &amp;lastname" newline="False"/>
+            <output expression="&quot; is $&quot; &amp;totaltuition" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>

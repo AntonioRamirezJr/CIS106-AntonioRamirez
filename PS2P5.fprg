@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 05:33:58 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTY2SzVLTjU7MjAyMy0xMC0wMTswNDozMToxNiBQTTszMjg1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTY2SzVLTjU7MjAyMy0xMC0wMTswNTozMzo1OCBQTTs0OzM0MDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;WARNING: Input all discount percentages in decimal form!&quot;" newline="True"/>
+            <declare name="itemprice" type="Real" array="False" size=""/>
+            <declare name="discpercent" type="Real" array="False" size=""/>
+            <declare name="discamount" type="Real" array="False" size=""/>
+            <declare name="discprice" type="Real" array="False" size=""/>
+            <input variable="itemprice"/>
+            <input variable="discpercent"/>
+            <assign variable="discamount" expression="itemprice * discpercent"/>
+            <assign variable="discprice" expression="itemprice - discamount"/>
+            <output expression="&quot;The final discounted price of this item is $&quot; &amp;discprice" newline="False"/>
+            <output expression="&quot; for a total savings of $&quot; &amp;discamount" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

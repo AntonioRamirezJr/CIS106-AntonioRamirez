@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 04:04:21 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTY2SzVLTjU7MjAyMy0xMC0wMTswMzoxNzozOSBQTTszMjkz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTY2SzVLTjU7MjAyMy0xMC0wMTswNDowNDoyMSBQTTsxOzMzODk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;WARNING: All values provided will be calculated as meters!&quot;" newline="True"/>
+            <declare name="length" type="Real" array="False" size=""/>
+            <declare name="width" type="Real" array="False" size=""/>
+            <declare name="area" type="Real" array="False" size=""/>
+            <declare name="circumference" type="Real" array="False" size=""/>
+            <input variable="length"/>
+            <input variable="width"/>
+            <assign variable="area" expression="length * width"/>
+            <assign variable="circumference" expression="2 * length + 2 * width"/>
+            <output expression="&quot;Based on the rectangle measurements provided, the resulting area is &quot; &amp;area" newline="False"/>
+            <output expression="&quot; m^2&quot;" newline="False"/>
+            <output expression="&quot;, and the circumfrence is &quot; &amp;circumference" newline="False"/>
+            <output expression="&quot; m&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
