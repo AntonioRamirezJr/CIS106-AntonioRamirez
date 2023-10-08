@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-07 09:28:06 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTVGUFZIUjY7MjAyMy0xMC0wNzswODoxNTo1MSBQTTszMzUx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTVGUFZIUjY7MjAyMy0xMC0wNzswOToyODowNiBQTTsxOzM0NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Compute the value of your new car!&quot;" newline="True"/>
+            <output expression="&quot;WARNING: Please input all percentages as a decimal.&quot;" newline="True"/>
+            <declare name="Make" type="String" array="False" size=""/>
+            <declare name="Model" type="String" array="False" size=""/>
+            <declare name="MSRP" type="Real" array="False" size=""/>
+            <declare name="DiscPercent" type="Real" array="False" size=""/>
+            <declare name="AmtOffMSRP" type="Real" array="False" size=""/>
+            <declare name="DiscPrice" type="Real" array="False" size=""/>
+            <input variable="Make"/>
+            <input variable="Model"/>
+            <input variable="MSRP"/>
+            <input variable="DiscPercent"/>
+            <assign variable="AmtOffMSRP" expression="MSRP * DiscPercent"/>
+            <assign variable="DiscPrice" expression="MSRP - AmtOffMSRP"/>
+            <output expression="&quot;Make: &quot; &amp;Make" newline="True"/>
+            <output expression="&quot;Model: &quot; &amp;Model" newline="True"/>
+            <output expression="&quot;MSRP: $&quot; &amp;MSRP" newline="True"/>
+            <output expression="&quot;Discount Percentage:&quot; &amp;DiscPercent" newline="True"/>
+            <output expression="&quot;Amount Off MSRP: $&quot; &amp;AmtOffMSRP" newline="True"/>
+            <output expression="&quot;Discounted Price: $&quot; &amp;DiscPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

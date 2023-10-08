@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-07 07:19:06 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTVGUFZIUjY7MjAyMy0xMC0wNzswNjo0OTozNyBQTTszMzYw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTVGUFZIUjY7MjAyMy0xMC0wNzswNzoxOTowNiBQTTsxOzM0NjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="StockTckr" type="String" array="False" size=""/>
+            <declare name="SharesQty" type="Real" array="False" size=""/>
+            <declare name="SharePrice" type="Real" array="False" size=""/>
+            <declare name="AmtInvested" type="Integer" array="False" size=""/>
+            <input variable="StockTckr"/>
+            <input variable="SharesQty"/>
+            <input variable="SharePrice"/>
+            <assign variable="AmtInvested" expression="SharesQty * SharePrice"/>
+            <output expression="&quot;Ticker Symbol: &quot; &amp;StockTckr" newline="True"/>
+            <output expression="&quot;Amount Invested: $&quot; &amp;AmtInvested" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

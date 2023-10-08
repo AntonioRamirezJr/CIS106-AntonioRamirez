@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-07 08:14:43 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTVGUFZIUjY7MjAyMy0xMC0wNzswNzoyMTo0MSBQTTszMzQ2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTVGUFZIUjY7MjAyMy0xMC0wNzswODoxNDo0MyBQTTsxOzM0NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Evenly split the money among your friends!&quot;" newline="True"/>
+            <declare name="Name1" type="String" array="False" size=""/>
+            <declare name="Name2" type="String" array="False" size=""/>
+            <declare name="Name3" type="String" array="False" size=""/>
+            <declare name="AmtReceived" type="Real" array="False" size=""/>
+            <declare name="AmtName1" type="Real" array="False" size=""/>
+            <declare name="AmtName2" type="Real" array="False" size=""/>
+            <declare name="AmtName3" type="Real" array="False" size=""/>
+            <input variable="Name1"/>
+            <input variable="Name2"/>
+            <input variable="Name3"/>
+            <input variable="AmtReceived"/>
+            <assign variable="AmtName1" expression="AmtReceived / 3"/>
+            <assign variable="AmtName2" expression="AmtReceived / 3"/>
+            <assign variable="AmtName3" expression="AmtReceived / 3"/>
+            <output expression="&quot;The amount to be received by each friend is as follows: &quot;" newline="True"/>
+            <output expression="&quot;$&quot; &amp;AmtName1" newline="False"/>
+            <output expression="&quot; : &quot; &amp;Name1" newline="True"/>
+            <output expression="&quot;$&quot; &amp;AmtName2" newline="False"/>
+            <output expression="&quot; : &quot; &amp;Name2" newline="True"/>
+            <output expression="&quot;$&quot; &amp;AmtName3" newline="False"/>
+            <output expression="&quot; : &quot; &amp;Name3" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
