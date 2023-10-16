@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 10:01:43 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVLTFRMUko7MjAyMy0xMC0xNTswOTo1NToxNCBQTTszMzkz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVLTFRMUko7MjAyMy0xMC0xNTsxMDowMTo0MyBQTTsxOzM0ODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ExamScore1" type="Real" array="False" size=""/>
+            <declare name="ExamScore2" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <input variable="ExamScore1"/>
+            <input variable="ExamScore2"/>
+            <assign variable="Total" expression="(ExamScore1 * 0.6) + (ExamScore2 * 0.4)"/>
+            <output expression="Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

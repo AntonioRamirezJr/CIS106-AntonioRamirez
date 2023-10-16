@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-16 06:20:31 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUk4RFVOTTE7MjAyMy0xMC0xNjswNjowNTo1MiBQTTszMzM4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUk4RFVOTTE7MjAyMy0xMC0xNjswNjoyMDozMSBQTTsxOzM0NDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="FixedCosts" type="Real" array="False" size=""/>
+            <declare name="PricePerUnit" type="Real" array="False" size=""/>
+            <declare name="CostPerUnit" type="Real" array="False" size=""/>
+            <declare name="BEpoint" type="Real" array="False" size=""/>
+            <input variable="FixedCosts"/>
+            <input variable="PricePerUnit"/>
+            <input variable="CostPerUnit"/>
+            <assign variable="BEpoint" expression="(FixedCosts)/(PricePerUnit - CostPerUnit)"/>
+            <output expression="&quot;The amount of items that you must sell to cover your overhead expenses is: &quot; &amp;BEpoint &amp; &quot; Units&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
