@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-28 07:26:26 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUg4UlFLQU07MjAyMy0xMC0yODswNjoyNDoxNyBQTTszMzY1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUg4UlFLQU07MjAyMy0xMC0yODswNzoyNjoyNiBQTTsxOzM0NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="PartNum" type="String" array="False" size=""/>
+            <declare name="Qty" type="Real" array="False" size=""/>
+            <declare name="UnitCost" type="Real" array="False" size=""/>
+            <declare name="TotalCost" type="Real" array="False" size=""/>
+            <input variable="PartNum"/>
+            <input variable="Qty"/>
+            <if expression="PartNum = &quot;10&quot; or PartNum = &quot;55&quot;">
+                <then>
+                    <assign variable="UnitCost" expression="1.00"/>
+                </then>
+                <else>
+                    <if expression="PartNum = &quot;99&quot;">
+                        <then>
+                            <assign variable="UnitCost" expression="2.00"/>
+                        </then>
+                        <else>
+                            <if expression="PartNum = &quot;80&quot; or PartNum = &quot;70&quot;">
+                                <then>
+                                    <assign variable="UnitCost" expression="3.00"/>
+                                </then>
+                                <else>
+                                    <assign variable="UnitCost" expression="5.00"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="TotalCost" expression="UnitCost * Qty"/>
+            <output expression="&quot;Part Number: &quot;&amp;PartNum" newline="True"/>
+            <output expression="&quot;Quantity: &quot; &amp;Qty" newline="True"/>
+            <output expression="&quot;Cost per Unit: $&quot; &amp;UnitCost" newline="True"/>
+            <output expression="&quot;Total Cost: $&quot; &amp;TotalCost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

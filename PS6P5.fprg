@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-28 09:23:32 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUg4UlFLQU07MjAyMy0xMC0yODswOTowMjowNiBQTTszMzYy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUg4UlFLQU07MjAyMy0xMC0yODswOToyMzozMiBQTTsxOzM0NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Lname" type="String" array="False" size=""/>
+            <declare name="Salary" type="Real" array="False" size=""/>
+            <declare name="JobLevel" type="Real" array="False" size=""/>
+            <declare name="BonusRate" type="Real" array="False" size=""/>
+            <declare name="BonusAmt" type="Real" array="False" size=""/>
+            <input variable="Lname"/>
+            <input variable="Salary"/>
+            <input variable="JobLevel"/>
+            <if expression="JobLevel &gt;= 10">
+                <then>
+                    <assign variable="BonusRate" expression="0.25"/>
+                </then>
+                <else>
+                    <if expression="JobLevel &gt;= 5 and JobLevel &lt;= 9">
+                        <then>
+                            <assign variable="BonusRate" expression="0.20"/>
+                        </then>
+                        <else>
+                            <assign variable="BonusRate" expression="0.10"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="BonusAmt" expression="Salary * BonusRate"/>
+            <output expression="&quot;Employee Last Name: &quot; &amp;Lname" newline="True"/>
+            <output expression="&quot;Bonus: $&quot; &amp;BonusAmt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
