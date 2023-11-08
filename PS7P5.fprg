@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-07 06:21:45 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTRUUDE4NjE7MjAyMy0xMS0wNzswNDozNTowNSBQTTszMjc2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTRUUDE4NjE7MjAyMy0xMS0wNzswNjoyMTo0NSBQTTsxOzMzODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Response" type="String" array="False" size=""/>
+            <declare name="Qty" type="Real" array="False" size=""/>
+            <declare name="Price" type="Real" array="False" size=""/>
+            <declare name="ExtPrice" type="Real" array="False" size=""/>
+            <declare name="DiscAmt" type="Real" array="False" size=""/>
+            <declare name="DiscTotal" type="Real" array="False" size=""/>
+            <declare name="SumOfDiscAmt" type="Real" array="False" size=""/>
+            <declare name="TotalOrder" type="Real" array="False" size=""/>
+            <declare name="AvgDiscAmt" type="Real" array="False" size=""/>
+            <declare name="NoOfOrders" type="Real" array="False" size=""/>
+            <assign variable="SumOfDiscAmt" expression="0"/>
+            <assign variable="NoOfOrders" expression="0"/>
+            <output expression="&quot;Do you want to calculate the total order with discount? (Yes or No)&quot;" newline="True"/>
+            <input variable="Response"/>
+            <while expression="Response == &quot;Yes&quot;">
+                <input variable="Qty"/>
+                <input variable="Price"/>
+                <assign variable="ExtPrice" expression="Qty * Price"/>
+                <if expression="ExtPrice &gt; 10000">
+                    <then>
+                        <assign variable="DiscAmt" expression="ExtPrice * 0.25"/>
+                    </then>
+                    <else>
+                        <assign variable="DiscAmt" expression="ExtPrice * 0.10"/>
+                    </else>
+                </if>
+                <assign variable="TotalOrder" expression="ExtPrice - DiscAmt"/>
+                <assign variable="SumOfDiscAmt" expression="SumOfDiscAmt + DiscAmt"/>
+                <assign variable="NoOfOrders" expression="NoOfOrders + 1"/>
+                <output expression="&quot;Extended Price: $&quot; &amp;ExtPrice" newline="True"/>
+                <output expression="&quot;Discount Earned: $&quot; &amp;DiscAmt" newline="True"/>
+                <output expression="&quot;Total Order Amount: $&quot; &amp;TotalOrder" newline="True"/>
+                <output expression="&quot;Do you want to enter another order? (Yes or No)&quot;" newline="True"/>
+                <input variable="Response"/>
+            </while>
+            <output expression="&quot;Total Discount Given: $&quot; &amp;SumOfDiscAmt" newline="True"/>
+            <output expression="&quot;Number of Orders: &quot; &amp;NoOfOrders" newline="True"/>
+            <assign variable="AvgDiscAmt" expression="SumOfDiscAmt / NoOfOrders"/>
+            <output expression="&quot;Average Discount Given: $&quot; &amp;AvgDiscAmt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-07 10:04:42 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTlQSVM2UzM7MjAyMy0xMS0wNzswOTo1MToxMiBQTTszMzM0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTlQSVM2UzM7MjAyMy0xMS0wNzsxMDowNDo0MiBQTTsxOzM0MzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="StartValue" type="Real" array="False" size=""/>
+            <declare name="StopValue" type="Real" array="False" size=""/>
+            <declare name="IncValue" type="Real" array="False" size=""/>
+            <input variable="StartValue"/>
+            <input variable="StopValue"/>
+            <input variable="IncValue"/>
+            <output expression="&quot;START VALUE: &quot; &amp;StartValue" newline="True"/>
+            <while expression="StartValue &lt;= StopValue">
+                <output expression="&quot;Loop (+ Increment Value): &quot; &amp;StartValue" newline="True"/>
+                <assign variable="StartValue" expression="StartValue + IncValue"/>
+            </while>
+            <output expression="&quot;STOP VALUE: &quot; &amp;StopValue" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

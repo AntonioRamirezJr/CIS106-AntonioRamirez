@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-07 08:05:24 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTRUUDE4NjE7MjAyMy0xMS0wNzswNzo0NDowMyBQTTszMjc3"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTRUUDE4NjE7MjAyMy0xMS0wNzswODowNToyNCBQTTsxOzMzODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Response" type="String" array="False" size=""/>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="ExamScore1" type="Real" array="False" size=""/>
+            <declare name="ExamScore2" type="Real" array="False" size=""/>
+            <declare name="AvgExamScore" type="Real" array="False" size=""/>
+            <declare name="NumOfStudents" type="Real" array="False" size=""/>
+            <assign variable="NumOfStudents" expression="0"/>
+            <output expression="&quot;Would you like to calculate student test scores? (Yes or No)&quot;" newline="True"/>
+            <input variable="Response"/>
+            <while expression="Response == &quot;Yes&quot;">
+                <input variable="LastName"/>
+                <input variable="ExamScore1"/>
+                <input variable="ExamScore2"/>
+                <assign variable="AvgExamScore" expression="(ExamScore1 + ExamScore2) / 2"/>
+                <assign variable="NumOfStudents" expression="NumOfStudents + 1"/>
+                <output expression="&quot;Student Last Name: &quot; &amp;LastName" newline="True"/>
+                <output expression="&quot;Average Exam Score: &quot; &amp;AvgExamScore" newline="True"/>
+                <output expression="&quot;Would you like to calculate another student's exam scores? (Yes or No)&quot;" newline="True"/>
+                <input variable="Response"/>
+            </while>
+            <output expression="&quot;Number Of Students: &quot; &amp;NumOfStudents" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
