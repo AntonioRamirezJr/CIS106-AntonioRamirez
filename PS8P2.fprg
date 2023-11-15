@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-14 11:09:12 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUxRRVBGOTM7MjAyMy0xMS0xNDsxMDowMjo0NyBBTTszMzE2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUxRRVBGOTM7MjAyMy0xMS0xNDsxMTowOToxMiBBTTsxOzM0MjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <declare name="Counter" type="Real" array="False" size=""/>
+            <assign variable="A" expression="1"/>
+            <assign variable="B" expression="0"/>
+            <assign variable="Counter" expression="0"/>
+            <for variable="Counter" start="1" end="20" direction="inc" step="1">
+                <assign variable="C" expression="A + B"/>
+                <output expression="&quot;Fib Value: &quot; &amp; C" newline="True"/>
+                <assign variable="A" expression="B"/>
+                <assign variable="B" expression="C"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
